@@ -169,10 +169,10 @@ public class CitadelReinforcementData {
 			long first_time = System.currentTimeMillis();
 			Citadel.Log("Updating to version 8: The acid test. Note: This will take a while.");
 			db.execute("alter table reinforcement add acid_time int not null;"); 
-			db.execute("update reinformement set acid_time = maturation_time;"); // Might take a minute.
+			db.execute("update reinforcement set acid_time = maturation_time;"); // Might take a minute.
 			NameLayerPlugin.insertVersionNum(ver, plugin.getName());
 			ver = NameLayerPlugin.getVersionNum(plugin.getName());
-			Citadel.Log("The update to Version 7 took " + (System.currentTimeMillis() / first_time) / 1000 + " seconds.");
+			Citadel.Log("The update to Version 8 took " + (System.currentTimeMillis() / first_time) / 1000 + " seconds.");
 		}
 		Citadel.Log("The total time it took Citadel to update was " + 
 				(System.currentTimeMillis() - begin_time) / 1000 + " seconds.");
