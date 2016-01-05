@@ -7,6 +7,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import org.bukkit.block.BlockState;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.util.BlockIterator;
@@ -110,6 +111,9 @@ public class Acid extends PlayerCommand {
 			topFace.setType(Material.AIR);
 
 			block.breakNaturally();
+			
+			BlockState bs = block.getState();
+			bs.update(false, true);
 			
 			// Consider if should simply be an AcidBlockEvent listener. This will do for now.
 			Utility.reinforcementBroken(p, pRein);
