@@ -102,4 +102,4 @@ mysql:
  username: "bukkit"
  password: ""
 # Shows reinforcement information as percentile value
-show_health_as_percent: true
+show_health_as_percent: false
